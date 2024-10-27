@@ -1,6 +1,6 @@
-# Parquet Loader
+# PyTorch Parquet Loader
 
-`parquet_loader` is a Python library for loading large Parquet files as PyTorch `DataLoader` objects, optimized for memory efficiency using Dask.
+`pytorch_parquet_loader` is a Python library for loading large Parquet files as PyTorch `DataLoader` objects, optimized for memory efficiency using Dask.
 
 ## Features
 
@@ -25,7 +25,7 @@ pip install pytorch_parquet_loader
 
 To run the test, you can the below script:
 ```python
-from parquet_loader import load_parquet_as_dataloader
+from pytorch_parquet_loader import load_parquet_as_dataloader
 
 # Path to your Parquet file
 file_path = "path/to/your_large_file.parquet"

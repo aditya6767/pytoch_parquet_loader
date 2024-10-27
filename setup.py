@@ -11,7 +11,7 @@ setup(
     long_description_content_type="text/markdown",
     author="Aditya Jaiswal",
     author_email="aditya.jaiswal@gmail.com",
-    url="https://github.com/aditya6767/parquet_loader",  # Replace with your GitHub URL
+    url="https://github.com/aditya6767/pytoch_parquet_loader",
     packages=find_packages(),
     install_requires=requirements,
     classifiers=[
