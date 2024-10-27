@@ -1,0 +1,8 @@
+torch==2.5.0
+dask[complete] 
+pyarrow
+pytest
+fastparquet
+setuptools 
+wheel
+scikit-learn
