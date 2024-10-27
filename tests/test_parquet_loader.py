@@ -14,7 +14,6 @@ def test_dask_parquet_dataset():
 
     # Iterate through the dataloader and check the shape of each batch
     for i, batch in enumerate(dataloader):
-        print(batch.shape)
         assert isinstance(batch, torch.Tensor), f"Batch {i} is not a torch.Tensor"
         assert batch.shape[0] <= batch_size, f"Batch {i} should have at most {batch_size} rows"
 
