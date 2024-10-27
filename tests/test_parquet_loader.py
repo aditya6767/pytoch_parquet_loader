@@ -2,7 +2,7 @@ import os
 import pytest
 from pathlib import Path
 import torch
-from pytoch_parquet_loader import load_parquet_as_dataloader
+from pytorch_parquet_loader import load_parquet_as_dataloader
 
 PARQUET_FILE_PATH = Path(__file__).parent / "data" / "flights_1m.parquet"
 
