@@ -3,7 +3,7 @@ from torch.utils.data import DataLoader
 from .dataset import ParquetDataset
 
 
-def load_parquet_as_dataloader(file_path, batch_size=32, columns=None, meta=None, num_workers=0):
+def load_parquet_as_dataloader(file_path, batch_size=32, columns=None, num_workers=0) -> DataLoader:
     """
     Load a Parquet file as a PyTorch DataLoader.
 
@@ -11,7 +11,6 @@ def load_parquet_as_dataloader(file_path, batch_size=32, columns=None, meta=None
         file_path (str): Path to the Parquet file.
         batch_size (int): Number of rows per batch.
         columns (list): List of columns to read from the Parquet file.
-        meta (dict): Metadata dictionary specifying column types.
         num_workers (int): Number of worker processes for DataLoader.
 
     Returns:
