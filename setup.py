@@ -20,4 +20,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.9",
+    project_urls={
+        "PyPI": "https://pypi.org/project/pytorch_parquet_loader/",
+    },
 )
