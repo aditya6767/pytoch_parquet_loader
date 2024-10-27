@@ -21,8 +21,3 @@ def load_parquet_as_dataloader(file_path, batch_size=32, columns=None, meta=None
     dataset = ParquetDataset(file_path, batch_size=batch_size, columns=columns)
     # Wrap in DataLoader and return
     return DataLoader(dataset, batch_size=None, num_workers=num_workers)
-
-
-def create_dataloader(file_path, batch_size=32, columns=None, num_workers=0):
-    dataset = ParquetDataset(file_path, batch_size=batch_size, columns=columns)
-    return DataLoader(dataset, batch_size=None, num_workers=num_workers)

@@ -18,17 +18,10 @@ class ParquetDataset(IterableDataset):
         self.file_path = file_path
         self.batch_size = batch_size
         self.columns = columns
-        # self.dataframe = dd.read_parquet(file_path, columns=columns, engine='pyarrow')
-        # self.dataframe = self.dataframe.apply(self._convert_to_numeric, axis=1)
         self.dataframe = dd.read_parquet(file_path, columns=columns, engine='pyarrow')
         self.dataframe = self.dataframe.map_partitions(self._filter_and_convert_columns)
         self.num_rows = len(self.dataframe)
         self.label_encoders = {}
-
-    @staticmethod
-    def _convert_to_numeric(row):
-        """Convert non-numeric columns to NaN and ensure numeric types."""
-        return row.apply(pd.to_numeric, errors='coerce').fillna(0)
 
     def _filter_and_convert_columns(self, df):
         """Keep only numeric, date32[day], and object columns, converting as needed."""
